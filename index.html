@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Lisa ❤️</title>
+<style>
+body { margin:0; height:100vh; background: radial-gradient(circle at top,#1a001a,#330033); display:flex; justify-content:center; align-items:center; flex-direction:column; font-family:Arial,sans-serif; color:white; text-align:center; overflow:hidden;}
+h1 { font-size:55px; color:#ff3366; animation:glow 1.5s infinite alternate;}
+p { font-size:22px; max-width:600px; margin-top:15px; animation:fadeIn 2s ease-in-out; line-height:1.5;}
+button { padding:12px 25px; font-size:18px; border:none; border-radius:25px; background-color:#ff3366; color:white; cursor:pointer; margin-top:20px; transition:0.3s; animation:bounce 2s infinite;}
+button:hover { background-color:#ff1a4d; transform:scale(1.1);}
+@keyframes glow { from{ text-shadow:0 0 10px #ff3366,0 0 20px #ff6699;} to{ text-shadow:0 0 25px #ff99aa,0 0 50px #ff3366; } }
+@keyframes fadeIn { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
+@keyframes bounce { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-10px);} }
+.heart { position:absolute; font-size:25px; animation:float 4s linear infinite; opacity:0.8;}
+@keyframes float { 0%{transform:translateY(100vh) translateX(0) rotate(0deg); opacity:0;} 10%{opacity:1;} 50%{transform:translateY(50vh) translateX(50px) rotate(180deg);} 100%{transform:translateY(-10vh) translateX(-50px) rotate(360deg); opacity:0;} }
+</style>
+</head>
+<body>
+<h1>Lisa ❤️</h1>
+<p>
+I Lᴏᴠᴇ Yᴏᴜ 🥹💗<br>
+আপনাকে আমি অনেক ভালোবাসি 😭🫀<br>
+I love you Sundori 🥹<br><br>
+Do You Love Me..? 🥹
+</p>
+<button onclick="showMessage()">Click Here 💍</button>
+<script>
+function showMessage(){ alert("Lisa, I love you ❤️"); }
+// floating hearts
+for(let i=0;i<20;i++){ let heart=document.createElement('div'); heart.className='heart'; heart.style.left=Math.random()*100+'vw'; heart.style.fontSize=(15+Math.random()*20)+'px'; heart.innerHTML='❤️'; document.body.appendChild(heart);}
+</script>
+</body>
+</html>
